@@ -19,6 +19,7 @@ jobs:
           gcloud auth activate-service-account --key-file=${HOME}/firebase-service-account.json
           gcloud config set project cicd-practice-270a8
       - name: Install Dependencies
+        working-directory: ./functions
         run: npm install
       - name: Deploy Firebase Functions
         run: firebase deploy --only functions

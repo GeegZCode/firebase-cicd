@@ -23,4 +23,4 @@ jobs:
         run: npm install
       - name: Deploy Firebase Functions
         working-directory: ./functions
-        run: firebase deploy --only functions --token "$(gcloud auth print-access-token)"
+        run: firebase deploy --only functions
